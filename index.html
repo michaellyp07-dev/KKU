@@ -687,6 +687,166 @@
       transform: scale(1.05);
     }
 
+    /* ===== PAKET BOX (Nasi Kuning 2 Paket Accordion) ===== */
+    .menu-card--paket .card-body {
+      padding-bottom: 22px;
+    }
+
+    /* Toggle button */
+    .paket-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 14px;
+      padding: 10px 16px;
+      background: var(--bg-alt);
+      border: 1.5px solid rgba(45, 90, 39, 0.2);
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--primary);
+      transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .paket-toggle-btn:hover {
+      background: rgba(45, 90, 39, 0.08);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .paket-toggle-btn[aria-expanded="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+    }
+
+    .paket-toggle-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .paket-toggle-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+
+    .paket-toggle-btn[aria-expanded="true"] .paket-toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Accordion container */
+    .paket-accordion {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+      opacity: 0;
+    }
+
+    .paket-accordion.open {
+      max-height: 600px;
+      opacity: 1;
+    }
+
+    .paket-accordion-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 12px;
+    }
+
+    .paket-box {
+      border: 1.5px solid rgba(45, 90, 39, 0.15);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px 16px;
+      background: var(--bg-alt);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .paket-box:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .paket-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .paket-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .paket-label--1 {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .paket-label--2 {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .paket-price {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .paket-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+      padding: 0;
+    }
+
+    .paket-items li {
+      font-size: 0.83rem;
+      color: var(--text-body);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .paket-dot {
+      color: var(--accent);
+      font-size: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .paket-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.82rem;
+      padding: 8px 14px;
+    }
+
+    .paket-btn--2 {
+      background: var(--primary);
+      box-shadow: none;
+    }
+
+    .paket-btn--2:hover {
+      background: var(--primary-dark);
+    }
+
+
+
     /* ===== HOW TO ORDER ===== */
     .how-section {
       padding: 90px 5%;
@@ -1549,26 +1709,69 @@
         </div>
       </article>
 
-      <!-- Kartu 2: Nasi Kuning -->
-      <article class="menu-card reveal" style="transition-delay:0.15s" aria-label="Menu Nasi Kuning Ayam Krispi">
+      <!-- Kartu 2: Nasi Kuning (2 Paket, accordion) -->
+      <article class="menu-card menu-card--paket reveal" style="transition-delay:0.15s" aria-label="Menu Nasi Kuning 2 Paket">
         <div class="card-img-wrap">
-          <img src="NasiKuning.JPG" alt="Nasi Kuning Ayam Krispi" class="card-img" loading="lazy" />
+          <img src="NasiKuning.JPG" alt="Nasi Kuning Bu Sarofah" class="card-img" loading="lazy" />
           <span class="card-badge badge-andalan">Andalan Bazaar</span>
         </div>
         <div class="card-body">
-          <h3 class="card-name">Nasi Kuning Ayam Krispi</h3>
+          <h3 class="card-name">Nasi Kuning Bu Sarofah</h3>
           <p class="card-desc">
-            Nasi kuning gurih dengan ayam krispi renyah, serundeng, dan kerupuk.
-            Cocok untuk sarapan atau bekal siang.
+            Nasi kuning gurih tersedia dalam <strong>2 pilihan paket</strong> — pilih sesuai selera!
           </p>
-          <div class="card-footer">
-            <span class="card-price">Rp 15.000<span style="font-size:0.72rem;font-weight:600;color:var(--text-muted)"> /
-                porsi</span></span>
-            <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Ayam%20Krispi%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
-              class="card-order-btn" target="_blank" rel="noopener noreferrer" id="order-nasi-kuning">
-              Pesan
-            </a>
+
+          <!-- Tombol toggle accordion -->
+          <button class="paket-toggle-btn" id="paket-toggle" aria-expanded="false" aria-controls="paket-accordion">
+            <span class="paket-toggle-text">Lihat Pilihan Paket</span>
+            <svg class="paket-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+
+          <!-- Accordion wrapper -->
+          <div class="paket-accordion" id="paket-accordion" aria-hidden="true">
+            <div class="paket-accordion-inner">
+
+              <!-- Paket 1 -->
+              <div class="paket-box" id="paket-box-1">
+                <div class="paket-header">
+                  <span class="paket-label paket-label--1">Paket 1</span>
+                  <span class="paket-price">Rp 15.000</span>
+                </div>
+                <ul class="paket-items" aria-label="Isi Paket 1">
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Tempe Orek</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Telur</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Bihun Goreng</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Ayam Crispy</li>
+                </ul>
+                <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%201%20(Rp%2015.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+                  class="card-order-btn paket-btn" target="_blank" rel="noopener noreferrer" id="order-nasi-kuning-p1">
+                  Pesan Paket 1
+                </a>
+              </div>
+
+              <!-- Paket 2 -->
+              <div class="paket-box" id="paket-box-2">
+                <div class="paket-header">
+                  <span class="paket-label paket-label--2">Paket 2</span>
+                  <span class="paket-price">Rp 13.000</span>
+                </div>
+                <ul class="paket-items" aria-label="Isi Paket 2">
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Tempe Orek</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Telur</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> Bihun Goreng</li>
+                  <li><span class="paket-dot" aria-hidden="true">✦</span> 2 Nugget</li>
+                </ul>
+                <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%202%20(Rp%2013.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+                  class="card-order-btn paket-btn paket-btn--2" target="_blank" rel="noopener noreferrer" id="order-nasi-kuning-p2">
+                  Pesan Paket 2
+                </a>
+              </div>
+
+            </div>
           </div>
+
         </div>
       </article>
 
@@ -1868,6 +2071,20 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     revealEls.forEach(el => revealObserver.observe(el));
+
+    // --- Nasi Kuning paket accordion toggle ---
+    const paketToggleBtn = document.getElementById('paket-toggle');
+    const paketAccordion = document.getElementById('paket-accordion');
+
+    if (paketToggleBtn && paketAccordion) {
+      paketToggleBtn.addEventListener('click', () => {
+        const isOpen = paketAccordion.classList.toggle('open');
+        paketToggleBtn.setAttribute('aria-expanded', isOpen);
+        paketAccordion.setAttribute('aria-hidden', !isOpen);
+        const textEl = paketToggleBtn.querySelector('.paket-toggle-text');
+        textEl.textContent = isOpen ? 'Tutup Pilihan Paket' : 'Lihat Pilihan Paket';
+      });
+    }
   </script>
 
 </body>
