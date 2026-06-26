@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -186,6 +186,12 @@
       font-weight: 800;
       color: var(--text-heading);
       line-height: 1.15;
+      transition: color var(--transition);
+    }
+
+    /* Logo text putih saat di atas hero */
+    .navbar:not(.scrolled) .logo-text {
+      color: var(--white);
     }
 
     .logo-tagline {
@@ -193,6 +199,16 @@
       color: var(--primary);
       font-weight: 600;
       letter-spacing: 0.5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 160px;
+      transition: color var(--transition);
+    }
+
+    /* Tagline putih saat di atas hero */
+    .navbar:not(.scrolled) .logo-tagline {
+      color: rgba(255,255,255,0.75);
     }
 
     .navbar-links {
@@ -202,29 +218,40 @@
       list-style: none;
     }
 
+    /* Putih saat di atas hero (sebelum di-scroll) */
     .navbar-links li a {
       font-weight: 700;
       font-size: 0.9rem;
-      color: var(--text-heading);
+      color: rgba(255, 255, 255, 0.92);
       padding: 8px 16px;
       border-radius: 50px;
       transition: background var(--transition), color var(--transition);
     }
 
     .navbar-links li a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--white);
+    }
+
+    /* Setelah di-scroll (navbar scrolled) → warna gelap normal */
+    .navbar.scrolled .navbar-links li a {
+      color: var(--text-heading);
+    }
+
+    .navbar.scrolled .navbar-links li a:hover {
       background: var(--bg-alt);
       color: var(--primary);
     }
 
     .navbar-links .nav-cta a {
       background: var(--accent);
-      color: var(--white);
+      color: var(--white) !important;
       padding: 8px 20px;
     }
 
     .navbar-links .nav-cta a:hover {
       background: var(--accent-dark);
-      color: var(--white);
+      color: var(--white) !important;
     }
 
     /* Hamburger */
@@ -1484,8 +1511,8 @@
       }
 
       .menu-grid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
       }
 
       .pickup-grid {
@@ -1525,7 +1552,7 @@
 
       .menu-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 420px;
         margin: 0 auto;
       }
 
@@ -1721,7 +1748,7 @@
         <div class="card-img-wrap">
           <img src="nasgor.webp" alt="Nasi Goreng altwopelangi" class="card-img" loading="lazy"
             style="object-position: center 60%;" />
-
+          <span class="card-badge badge-bestseller">Bestseller</span>
         </div>
         <div class="card-body">
           <h3 class="card-name">Nasi Goreng altwopelangi</h3>
@@ -1746,7 +1773,7 @@
         <div class="card-img-wrap">
           <img src="naskun.webp" alt="Nasi Kuning altwopelangi" class="card-img" loading="lazy"
             style="object-position: center 70%;" />
-
+          <span class="card-badge badge-andalan">Andalan</span>
         </div>
         <div class="card-body">
           <h3 class="card-name">Nasi Kuning altwopelangi</h3>
@@ -1815,7 +1842,7 @@
         <div class="card-img-wrap">
           <img src="eslin.webp" alt="Es Lilin altwopelangi" class="card-img" loading="lazy"
             style="object-position: center 15%;" />
-
+          <span class="card-badge badge-new">Favorit</span>
         </div>
         <div class="card-body">
           <h3 class="card-name">Es Lilin altwopelangi</h3>
@@ -2000,9 +2027,11 @@
 
       <!-- Google Maps Embed -->
       <div class="lokasi-map reveal" style="transition-delay:0.25s">
-        <iframe src="https://maps.google.com/maps?q=SDI+Taqwiyatul+Wathon+Semarang&output=embed" width="100%"
-          height="350" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"
-          title="Peta lokasi SDI Taqwiyatul Wathon Semarang"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.823!2d110.42!3d-6.945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bfb5f2bf3c5%3A0x3c3d5b65e7a4d5b9!2sTambaklorok%2C+Semarang+Utara%2C+Kota+Semarang%2C+Jawa+Tengah!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+          width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Peta lokasi altwopelangi – Tambaklorok, Semarang Utara"></iframe>
       </div>
 
     </div>
