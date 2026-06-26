@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Dapur Ibu Sarofah – Masakan rumahan hangat dengan sistem Pre-Order berbasis WhatsApp. Melayani nasi goreng, nasi kuning, dan es lilin untuk guru, warga sekitar, hingga seluruh Semarang." />
+    content="altwopelangi &ndash; Masakan rumahan hangat dengan sistem Pre-Order berbasis WhatsApp. Melayani nasi goreng, nasi kuning, dan es lilin untuk guru, warga sekitar, hingga seluruh Semarang." />
   <meta name="keywords"
-    content="dapur ibu sarofah, nasi goreng semarang, pre order makanan semarang, es lilin, nasi kuning, masakan rumahan, tambaklorok" />
-  <meta property="og:title" content="Dapur Ibu Sarofah – Masakan Rumahan Hangat" />
+    content="altwopelangi, nasi goreng semarang, pre order makanan semarang, es lilin, nasi kuning, masakan rumahan, tambaklorok" />
+  <meta property="og:title" content="altwopelangi &ndash; Masakan Rumahan Hangat" />
   <meta property="og:description"
     content="Pre-Order nasi &amp; es lilin langsung via WhatsApp. Pesan H-2, nikmati tanpa antre!" />
-  <title>Dapur Ibu Sarofah – Cita Rasa Masakan Rumahan Sejak 2010</title>
+  <title>altwopelangi &ndash; Cita Rasa Masakan Rumahan Sejak 2010</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -564,6 +564,7 @@
       gap: 28px;
       max-width: 1100px;
       margin: 0 auto;
+      justify-content: center;
     }
 
     .menu-card {
@@ -588,9 +589,10 @@
 
     .card-img {
       width: 100%;
-      height: 280px;
+      aspect-ratio: 4 / 3;
+      height: auto;
       object-fit: cover;
-      object-position: center bottom;
+      object-position: center center;
       transition: transform 0.5s ease;
       background-color: var(--bg-alt);
     }
@@ -969,9 +971,10 @@
 
     .pickup-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 340px));
       gap: 22px;
       margin-bottom: 36px;
+      justify-content: center;
     }
 
     .pickup-card {
@@ -1455,7 +1458,8 @@
       }
 
       .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        max-width: 420px;
       }
 
       .pickup-grid {
@@ -1545,7 +1549,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
     <div class="navbar-inner">
-      <a href="#" class="navbar-logo" aria-label="Dapur Ibu Sarofah – Beranda">
+      <a href="#" class="navbar-logo" aria-label="altwopelangi &ndash; Beranda">
         <div class="logo-icon" aria-hidden="true">
           <!-- Leaf / plant SVG icon -->
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1554,7 +1558,7 @@
           </svg>
         </div>
         <div>
-          <div class="logo-text">Dapur Ibu Sarofah</div>
+          <div class="logo-text">altwopelangi</div>
           <div class="logo-tagline">Cita Rasa Rumahan Sejak 2010</div>
         </div>
       </a>
@@ -1580,7 +1584,7 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="beranda" aria-label="Hero section">
-    <div class="hero-bg" role="img" aria-label="Foto nasi goreng Bu Sarofah"></div>
+    <div class="hero-bg" role="img" aria-label="Foto nasi goreng altwopelangi"></div>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
@@ -1619,7 +1623,7 @@
 
       <!-- Kolom kiri: foto -->
       <div class="about-img-wrap reveal">
-        <img src="fotojualan.png" alt="Foto Ibu Sarofah, pemilik Dapur Ibu Sarofah" class="about-img" loading="lazy" />
+        <img src="fotojualan.png" alt="Foto Ibu Sarofah, pemilik altwopelangi" class="about-img" loading="lazy" />
       </div>
 
       <!-- Kolom kanan: teks -->
@@ -1687,21 +1691,22 @@
     <div class="menu-grid">
 
       <!-- Kartu 1: Nasi Goreng -->
-      <article class="menu-card reveal" style="transition-delay:0.05s" aria-label="Menu Nasi Goreng Bu Sarofah">
+      <article class="menu-card reveal" style="transition-delay:0.05s" aria-label="Menu Nasi Goreng altwopelangi">
         <div class="card-img-wrap">
-          <img src="NasiGoreng.JPG" alt="Nasi Goreng Bu Sarofah" class="card-img" loading="lazy" />
-          <span class="card-badge badge-bestseller">Best Seller</span>
+          <img src="NasiGoreng.JPG" alt="Nasi Goreng altwopelangi" class="card-img" loading="lazy"
+            style="object-position: center 60%;" />
+
         </div>
         <div class="card-body">
-          <h3 class="card-name">Nasi Goreng Bu Sarofah</h3>
+          <h3 class="card-name">Nasi Goreng altwopelangi</h3>
           <p class="card-desc">
             Nasi goreng rumahan dengan bumbu rahasia, disajikan dengan telur dan tomat segar.
             Favorit anak sekolah sejak 2010!
           </p>
           <div class="card-footer">
-            <span class="card-price">Rp 5.000<span style="font-size:0.72rem;font-weight:600;color:var(--text-muted)"> /
+            <span class="card-price">Rp 15.000<span style="font-size:0.72rem;font-weight:600;color:var(--text-muted)"> /
                 porsi</span></span>
-            <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Goreng%20Bu%20Sarofah%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+            <a href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Goreng%20Bu%20Sarofah%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
               class="card-order-btn" target="_blank" rel="noopener noreferrer" id="order-nasi-goreng">
               Pesan
             </a>
@@ -1710,21 +1715,24 @@
       </article>
 
       <!-- Kartu 2: Nasi Kuning (2 Paket, accordion) -->
-      <article class="menu-card menu-card--paket reveal" style="transition-delay:0.15s" aria-label="Menu Nasi Kuning 2 Paket">
+      <article class="menu-card menu-card--paket reveal" style="transition-delay:0.15s"
+        aria-label="Menu Nasi Kuning 2 Paket">
         <div class="card-img-wrap">
-          <img src="NasiKuning.JPG" alt="Nasi Kuning Bu Sarofah" class="card-img" loading="lazy" />
-          <span class="card-badge badge-andalan">Andalan Bazaar</span>
+          <img src="NasiKuning.JPG" alt="Nasi Kuning altwopelangi" class="card-img" loading="lazy"
+            style="object-position: center 70%;" />
+
         </div>
         <div class="card-body">
-          <h3 class="card-name">Nasi Kuning Bu Sarofah</h3>
+          <h3 class="card-name">Nasi Kuning altwopelangi</h3>
           <p class="card-desc">
-            Nasi kuning gurih tersedia dalam <strong>2 pilihan paket</strong> — pilih sesuai selera!
+            Nasi kuning gurih tersedia dalam <strong>2 pilihan paket</strong> &mdash; pilih sesuai selera!
           </p>
 
           <!-- Tombol toggle accordion -->
           <button class="paket-toggle-btn" id="paket-toggle" aria-expanded="false" aria-controls="paket-accordion">
             <span class="paket-toggle-text">Lihat Pilihan Paket</span>
-            <svg class="paket-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <svg class="paket-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
               <path d="M6 9l6 6 6-6" />
             </svg>
           </button>
@@ -1740,12 +1748,12 @@
                   <span class="paket-price">Rp 15.000</span>
                 </div>
                 <ul class="paket-items" aria-label="Isi Paket 1">
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Tempe Orek</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Telur</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Bihun Goreng</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Ayam Crispy</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Tempe Orek</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Telur</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Bihun Goreng</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Ayam Crispy</li>
                 </ul>
-                <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%201%20(Rp%2015.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+                <a href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%201%20(Rp%2015.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
                   class="card-order-btn paket-btn" target="_blank" rel="noopener noreferrer" id="order-nasi-kuning-p1">
                   Pesan Paket 1
                 </a>
@@ -1758,13 +1766,14 @@
                   <span class="paket-price">Rp 13.000</span>
                 </div>
                 <ul class="paket-items" aria-label="Isi Paket 2">
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Tempe Orek</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Telur</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> Bihun Goreng</li>
-                  <li><span class="paket-dot" aria-hidden="true">✦</span> 2 Nugget</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Tempe Orek</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Telur</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> Bihun Goreng</li>
+                  <li><span class="paket-dot" aria-hidden="true">&#10022;</span> 2 Nugget</li>
                 </ul>
-                <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%202%20(Rp%2013.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
-                  class="card-order-btn paket-btn paket-btn--2" target="_blank" rel="noopener noreferrer" id="order-nasi-kuning-p2">
+                <a href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Nasi%20Kuning%20Paket%202%20(Rp%2013.000)%0AJumlah%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+                  class="card-order-btn paket-btn paket-btn--2" target="_blank" rel="noopener noreferrer"
+                  id="order-nasi-kuning-p2">
                   Pesan Paket 2
                 </a>
               </div>
@@ -1776,22 +1785,22 @@
       </article>
 
       <!-- Kartu 3: Es Lilin -->
-      <article class="menu-card reveal" style="transition-delay:0.25s" aria-label="Menu Es Lilin Bu Sarofah">
+      <article class="menu-card reveal" style="transition-delay:0.25s" aria-label="Menu Es Lilin altwopelangi">
         <div class="card-img-wrap">
-          <img src="Eslilin.JPG" alt="Es Lilin Bu Sarofah" class="card-img" loading="lazy"
-            style="object-position: center center;" />
-          <span class="card-badge badge-new">Baru</span>
+          <img src="Eslilin.JPG" alt="Es Lilin altwopelangi" class="card-img" loading="lazy"
+            style="object-position: center 15%;" />
+
         </div>
         <div class="card-body">
-          <h3 class="card-name">Es Lilin Bu Sarofah</h3>
+          <h3 class="card-name">Es Lilin altwopelangi</h3>
           <p class="card-desc">
             Es lilin warna-warni, manis dan segar. Tersedia berbagai rasa,
             pas untuk cuaca panas.
           </p>
           <div class="card-footer">
-            <span class="card-price">Rp 2.000<span style="font-size:0.72rem;font-weight:600;color:var(--text-muted)"> /
-                buah</span></span>
-            <a href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Es%20Lilin%20Bu%20Sarofah%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+            <span class="card-price">Rp 2.000<span style="font-size:0.72rem;font-weight:600;color:var(--text-muted)"> (4
+                buah)</span></span>
+            <a href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20altwopelangi!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20Es%20Lilin%20altwopelangi%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
               class="card-order-btn" target="_blank" rel="noopener noreferrer" id="order-es-lilin">
               Pesan
             </a>
@@ -1802,7 +1811,6 @@
     </div>
   </section>
 
-  <!-- ===== CARA PRE-ORDER ===== -->
   <section class="how-section" id="cara-pesan" aria-labelledby="how-title">
     <div class="how-header reveal">
       <span class="section-label">Cara Pre-Order</span>
@@ -1838,7 +1846,7 @@
           <span class="step-number" aria-hidden="true">III</span>
         </div>
         <h3 class="step-title">Ambil Sesuai Opsi yang Kamu Pilih</h3>
-        <p class="step-desc">Ambil di SD, titip admin, atau ambil di dapur sesuai kebutuhanmu.</p>
+        <p class="step-desc">Ambil langsung di dapur Ibu Sarofah atau gunakan GoSend sesuai kebutuhanmu.</p>
       </div>
 
     </div>
@@ -1859,40 +1867,25 @@
 
         <div class="pickup-card reveal" style="transition-delay:0.05s">
           <div class="pickup-icon" aria-hidden="true">
-            <!-- School / building icon -->
-            <svg viewBox="0 0 24 24">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          </div>
-          <h3 class="pickup-title">Ambil di SD</h3>
-          <p class="pickup-desc">Tersedia mulai pukul <strong>09.00 WIB</strong>. Langsung ambil di area sekolah.</p>
-        </div>
-
-        <div class="pickup-card reveal" style="transition-delay:0.15s">
-          <div class="pickup-icon" aria-hidden="true">
-            <!-- Person / user icon -->
-            <svg viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </div>
-          <h3 class="pickup-title">Titip Admin</h3>
-          <p class="pickup-desc">Khusus <strong>rekan kerja</strong>. Pesananmu dititipkan ke admin untuk kemudahan
-            pengambilan.</p>
-        </div>
-
-        <div class="pickup-card reveal" style="transition-delay:0.25s">
-          <div class="pickup-icon" aria-hidden="true">
             <!-- Home icon -->
             <svg viewBox="0 0 24 24">
               <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
           </div>
-          <h3 class="pickup-title">Ambil di Dapur Pusat</h3>
-          <p class="pickup-desc">Khusus <strong>tetangga sekitar</strong>. Ambil langsung dari dapur rumahan Ibu
-            Sarofah.</p>
+          <h3 class="pickup-title">Ambil di Dapur</h3>
+          <p class="pickup-desc">Ambil langsung dari dapur rumah Ibu Sarofah.</p>
+        </div>
+
+        <div class="pickup-card reveal" style="transition-delay:0.15s">
+          <div class="pickup-icon" aria-hidden="true">
+            <!-- Delivery / scooter icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M3 11l19-9-9 19-2-8-8-2z" />
+            </svg>
+          </div>
+          <h3 class="pickup-title">GoSend</h3>
+          <p class="pickup-desc">Pesan melalui GoSend untuk pengiriman ke lokasi kamu.</p>
         </div>
 
       </div>
@@ -1943,15 +1936,14 @@
             </div>
             <div>
               <div class="lokasi-card-type">Dapur Pusat</div>
-              <div class="lokasi-card-name">Dapur Ibu Sarofah</div>
+              <div class="lokasi-card-name">altwopelangi</div>
             </div>
           </div>
           <p class="lokasi-card-address">
-            Gang Panggang RT 04/RW 13, Tambaklorok,<br />
+            Gang Panggang No. 08, RT 04/RW 13, Tambaklorok,<br />
             Kel. Tanjungmas, Kec. Semarang Utara,<br />
             Kota Semarang
           </p>
-          <span class="lokasi-card-note">Khusus tetangga sekitar</span>
         </div>
 
         <!-- Kartu 2: Lokasi Jualan -->
@@ -1972,7 +1964,10 @@
           <p class="lokasi-card-address">
             Tambaklorok, Semarang Utara
           </p>
-          <span class="lokasi-card-note">Tersedia pukul 09.00 WIB (hari sekolah)</span>
+          <div style="display:flex; flex-direction:column; gap:8px; padding-left:62px;">
+            <span class="lokasi-card-note">06.00 &ndash; 06.30 WIB &nbsp;&middot;&nbsp; Hari Sekolah</span>
+            <span class="lokasi-card-note">08.30 &ndash; 09.00 WIB &nbsp;&middot;&nbsp; Hari Sekolah</span>
+          </div>
         </div>
 
       </div>
@@ -1998,7 +1993,7 @@
       </p>
 
       <a id="main-wa-btn"
-        href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+        href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
         class="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="Pesan lewat WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
@@ -2013,7 +2008,7 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer" role="contentinfo">
     <p>
-      <span class="footer-brand">Dapur Ibu Sarofah</span>
+      <span class="footer-brand">altwopelangi</span>
       &copy; 2026 | Semarang
     </p>
     <p class="footer-dev">
@@ -2024,8 +2019,8 @@
 
   <!-- ===== FLOATING WA BUTTON ===== -->
   <a id="float-wa-btn"
-    href="https://wa.me/6285727892527?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
-    class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Dapur Ibu Sarofah">
+    href="https://wa.me/6288224210044?text=Halo%20Kak%20Admin%20Dapur%20Ibu%20Sarofah!%20Saya%20ingin%20Pre-Order.%0ANama%3A%20%0ATanggal%20Pengambilan%3A%20%0APesanan%3A%20%0AMetode%20Bayar%3A%20%0AOpsi%20Ambil%3A%20"
+    class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp altwopelangi">
     <div class="float-wa-pulse" aria-hidden="true"></div>
     <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path
